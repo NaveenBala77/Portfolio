@@ -325,7 +325,7 @@ const Main = () => {
                 </div>
             </div>
             <div className='coffee'>
-              <h2>TAKE A COFFEE & CHAT WITH ME</h2>
+              <h2>HAVE A CHAT WITH ME</h2>
             </div>
             <div className='contact_details'>
               <div className='contact_box'>
