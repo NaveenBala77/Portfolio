@@ -9,7 +9,7 @@ import { FaIdCard } from "react-icons/fa";
 import { FaAt } from "react-icons/fa";
 import { MdBusinessCenter } from "react-icons/md";
 import { RiFileDownloadLine } from "react-icons/ri";
-import html from '../../Assets/Images/pngwing.com.png'
+import html from '../../Assets/Images/pngwing.com.png';
 import css from '../../Assets/Images/logo-2582747_1280.png'
 import js from '../../Assets/Images/js-javascript-round-logo-icon-png-7017516947717339mnyf7eumy.png'
 import reactjs from '../../Assets/Images/reactjs-inner.svg'
@@ -21,6 +21,7 @@ import { FaPhoneVolume } from "react-icons/fa6";
 import resume from '../../Assets/Images/NAVEEN BALA I.jpg'
 import jstask from '../../Assets/Images/jstaskk.png'
 import logo from '../../Assets/Images/fixed.png'
+import dashboardimg from '../../Assets/Images/dashboardimg.png'
 import { useRef } from 'react';
 // import bgimg from '../../../src/Assets/Images/noice-img.5b3dfa4894f329855a2f.png'
 // import axios from 'axios';
@@ -44,7 +45,7 @@ const Main = () => {
   //   }
   //   getapi();
   //  },[]);
-
+  
   function changeref(ref) {
     console.log(ref);
     ref.current.scrollIntoView({
@@ -115,11 +116,11 @@ const Main = () => {
                   <h2>Naveen</h2>
                   <h4>Bala</h4>
                   <h6>Front-End Developer</h6>
-                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus amet explicabo illum provident.</p>
+                  <p>Creative front-end developer crafting captivating, user-friendly websites that blend innovation and technology.</p>
                 </div>
                 <div className='front_buttons'>
-                  <button type="button" className='work_button'>View Work</button>
-                  <button type="button" className='contact_button'>Contact Me</button>
+                  <button type="button" className='work_button' onClick={()=>changeref(fourthref)}>View Work</button>
+                  <button type="button" className='contact_button' onClick={()=>changeref(fifthref)}>Contact Me</button>
                 </div>
               </div>
               <div className='main_image'></div>
@@ -162,7 +163,7 @@ const Main = () => {
                 </div>
                 <div className='bio_data'>
                   <div className='bio_q'>
-                    <p>Email</p>
+                    <p>Email</p>  
                   </div>
                   <div className='bio_a'>
                     <p>:</p>
@@ -196,27 +197,26 @@ const Main = () => {
             </div>
             <div className='education_box'>
              <div className='sslc'>
-               <h2>SSLC</h2>
+               <h2>SSLC (2017 - 2018)</h2>
                <p>Saraswathi Vidyalaya Matric Hr. Sec School, Muthupet</p>
                <span><h1></h1></span>
              </div>
              <div className='sslc'>
              <span><h1></h1></span>
-
-               <h2>HSC</h2>
+               <h2>HSC (2019 - 2020)</h2>
                <p>Brindhavan Matric. Hr. Sec School, Pattukkottai</p>
-             </div>
+              </div>
              <div className='sslc'>
              <span><h1></h1></span>
 
-               <h2>UG</h2>
+               <h2>UG (2020 - 2024)</h2>
                <p>Sri Ramakrishna Institute of Technology, Coimbatore</p>
              </div>
              <div className='sslc'>
              <span><h1></h1></span>
 
-               <h2>Full-Stack Development Course</h2>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo mollitia magni aliquam blanditiis? Nobis, illo in quod iusto tempore minus!</p>
+               <h2>Full-Stack Development Course (2024)</h2>
+               <p>Code Purple Academy, Coimbatore</p>
              </div>
             </div>
             </div>
@@ -230,16 +230,16 @@ const Main = () => {
                    <div className='html_circle' data-prog='75'>
                      <div className='skill_logo_percentage'>
                       <img src={html} alt="" srcset="" />
-                      <p>77%</p>
+                      <p>85%</p>``
                      </div>
-                   </div>
+                    </div>
                   <div className='html_skill_title'></div>
                 </div>
                 <div className='html_bar'>
                    <div className='css_circle' data-prog='75'>
                    <div className='skill_logo_percentage'>
                       <img src={css} alt="" srcset="" />
-                      <p>72%</p>
+                      <p>80%</p>
                      </div>
                    </div>
                   <div className='html_skill_title'></div>
@@ -257,7 +257,7 @@ const Main = () => {
                    <div className='react_circle' data-prog='75'>
                    <div className='skill_logo_percentage'>
                       <img src={reactjs} alt="" srcset="" />
-                      <p>75%</p>
+                      <p>77%</p>
                      </div>
                    </div>
                   <div className='html_skill_title'></div>
@@ -286,11 +286,11 @@ const Main = () => {
                   <img src={html} alt="" />
                   <img src={css} alt="" />
                 </div>
-                <a href="https://minimalin-two.vercel.app/">View Project <span><FaArrowRight /></span></a>
+                <a href="https://minimalin-two.vercel.app/">View Project<span><FaArrowRight /></span></a>
               </div>
               <div className='proj_card'>
               <div className='proj_img1'><img src={jstask} alt="" /></div>
-                <h3>Bank App Clone</h3>
+                <h3>Bankist App Clone</h3>
                 <div className='toolspic'>
                   <img src={js} alt="" />
                 </div>
@@ -305,12 +305,24 @@ const Main = () => {
                 </div>
                 <a href="">View Project <span><FaArrowRight /></span></a>
               </div>
+              <div className='proj_card'>
+                <div className='proj_img1'><img src={dashboardimg} alt="" /></div>
+                
+                <h3>CRM Dashboard</h3>
+                <div className='toolspic'>
+                  <img src={reactjs} alt="" />
+                </div>
+                <a href="https://crm-dashboard-one.vercel.app/">View Project <span><FaArrowRight /></span></a>
+              </div>
             </div>
           </div>
           <div className='contact' ref={fifthref}>
            <div className='contact_header'>
-                <div className='contact_head'><h2>Get in Touch.</h2></div>
-                <div className='contact_line'></div>
+                <div className='contact_head'>
+                  <h2>Get in Touch.</h2>
+                </div>
+                <div className='contact_line'>                  
+                </div>
             </div>
             <div className='coffee'>
               <h2>TAKE A COFFEE & CHAT WITH ME</h2>
