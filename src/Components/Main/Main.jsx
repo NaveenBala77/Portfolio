@@ -1,6 +1,6 @@
 // import React, { useEffect } from 'react'
 import './Main.css'
-import { CiLinkedin } from "react-icons/ci";
+import { FaGithub } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import { FaWhatsapp } from "react-icons/fa";
 import { IoHome } from "react-icons/io5";
@@ -18,11 +18,12 @@ import htmlpic from '../../Assets/Images/htmlpic.png'
 import { FaArrowRight } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { FaPhoneVolume } from "react-icons/fa6";
-import resume from '../../Assets/Images/NAVEEN BALA I.jpg'
+import resume from '../../Assets/Images/NAVEEN BALA II.jpg'
 import jstask from '../../Assets/Images/jstaskk.png'
 import logo from '../../Assets/Images/fixed.png'
 import dashboardimg from '../../Assets/Images/dashboardimg.png'
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
+import { GiHamburgerMenu } from "react-icons/gi";
 // import bgimg from '../../../src/Assets/Images/noice-img.5b3dfa4894f329855a2f.png'
 // import axios from 'axios';
 // import { useState } from 'react';
@@ -55,6 +56,10 @@ const Main = () => {
     })
     
   }
+  const[click,setclcik]=useState(false)
+  function moves(params) {
+    setclcik(!click)
+  }
   return (
     <div className='main'>
       <div className='background'>
@@ -70,19 +75,22 @@ const Main = () => {
            <div className='sidebar'>
             <div className='sideprofile'>
               <div className='prof_img'>
+              
+              <GiHamburgerMenu className='burgericon12'  onClick={moves}/>
                {/* <img src={logo} alt="" srcset="" /> */}
               </div>
+              
               <div className='side_prof_designation' >
-                <h2>Naveen bala</h2>
+                <h2>Naveen bala</h2> 
                 <h5>Front-End Developer</h5>
               </div>
               <div className='side_socicons'>
-               <button  className='linkedin'><CiLinkedin className='linkedin_logo' /></button>
+              <a href="https://github.com/NaveenBala77"><button  className='linkedin' ><FaGithub className='linkedin_logo' /></button></a>
                <button className='mail'><MdOutlineEmail className='mail_logo' /></button>
-               <button className='whatsapp'><FaWhatsapp className='whatsapp_logo'/></button>
+               <a href="https://wa.me/919080839803"><button className='whatsapp'><FaWhatsapp className='whatsapp_logo'/></button></a>
               </div>
             </div>
-            <div className='side_menu'>
+            <div className={click?"side-menu12":'side_menu'}>
             <div className='home_btn' onClick={()=>changeref(firstref)}>
                 <IoHome className='home_logo' /><h2>Home</h2>
               </div>
@@ -106,6 +114,11 @@ const Main = () => {
                   <p className='click'>Click</p>
                   <p className='dwld'>Download CV</p>
                 </button>
+              </div>
+              <div className='side_socicons'>
+              <a href="https://github.com/NaveenBala77"><button  className='linkedin' ><FaGithub className='linkedin_logo' /></button></a>
+               <button className='mail'><MdOutlineEmail className='mail_logo' /></button>
+               <a href="https://wa.me/919080839803"><button className='whatsapp'><FaWhatsapp className='whatsapp_logo'/></button></a>
               </div>
             </div>
            </div>
@@ -208,7 +221,6 @@ const Main = () => {
               </div>
              <div className='sslc'>
              <span><h1></h1></span>
-
                <h2>UG (2020 - 2024)</h2>
                <p>Sri Ramakrishna Institute of Technology, Coimbatore</p>
              </div>
